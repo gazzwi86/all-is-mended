@@ -1,0 +1,112 @@
+/***********************
+  SUPPORT FOR
+  What are we supporting?
+***********************/
+$support-for: (
+  chrome:  29,
+  edge:    20,
+  firefox: 26,
+  ie:      8,
+  opera:   14,
+  safari:  5,
+);
+
+// support for
+@import '../bower_components/support-for/sass/support-for';
+
+// normalize
+@import '../bower_components/normalize-scss/sass/normalize/variables';
+@import '../bower_components/normalize-scss/sass/normalize/vertical-rhythm';
+@import '../bower_components/normalize-scss/sass/normalize/normalize-mixin';
+@include normalize();
+
+// bourbon
+@import '../bower_components/bourbon/app/assets/stylesheets/bourbon';
+
+// bitters
+@import "../bower_components/neat/app/assets/stylesheets/neat-helpers";
+
+// customizable styles - based on bitters
+@import 'styles/_fonts.scss';
+
+// biters an custom vars
+@import "styles/variables";
+
+// Neat Settings -- uncomment if using Neat -- must be imported before Neat
+@import "styles/grid-settings";
+
+// neat
+@import '../bower_components/neat/app/assets/stylesheets/neat';
+
+@import "styles/buttons";
+@import "styles/forms";
+@import "styles/lists";
+@import "styles/tables";
+@import "styles/typography";
+
+body {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: $white url('/assets/images/bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+
+  .browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+  }
+
+  #ngProgress {
+    box-shadow: none;
+    background-color: $action-color !important;
+  }
+
+  .view {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    @include transition(all $base-duration $base-timing);
+
+    &--white {
+      background-color: $white;
+    }
+
+    &--fade {
+      opacity: 1;
+
+      &.ng-enter,
+      &.ng-leave {
+        @include transition(all $base-duration $base-timing);
+      }
+
+      &.ng-enter-active,
+      &.ng-enter {
+        opacity: 0;
+      }
+
+      &.ng-leave-active,
+      &.ng-leave {
+        opacity: 0;
+      }
+
+    }
+  }
+}
+
+// Component styles are injected through gulp
+// injector
+@import 'directives/bottom/bottom';
+@import 'directives/navbar/navbar';
+@import 'routes/main/main';
+@import 'styles/base';
+@import 'styles/buttons';
+@import 'styles/fonts';
+@import 'styles/forms';
+@import 'styles/grid-settings';
+@import 'styles/lists';
+@import 'styles/tables';
+@import 'styles/typography';
+@import 'styles/variables';
+// endinjector

@@ -1,0 +1,8 @@
+header.navbar
+  h3 All is mended
+  a.navbar__button(href="#" ng-click="vm.toggleNav()" ng-class="{'active': vm.navActive}")
+    span
+  nav(role="navigation" ng-class="{'active': vm.navActive}")
+    ul
+      li(ng-repeat="menu in vm.menu")
+        a(href="{{menu.link}}") {{menu.title}}

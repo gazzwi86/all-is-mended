@@ -1,0 +1,77 @@
+article#home
+  .container
+    h1 Efficient and affordable content creation, editing and proofreading services
+    p.lead Communicate better by enlisting an expert to write your wrongs.
+
+article#about
+  .container
+    h2.page-header About Me
+    p Hi, I'm Shelley, the editor behind All is mended.
+    p If you can’t tell from my Shakespeare-inspired business name, I’m a bit of a word nerd, with a Bachelor of Arts (Literary Studies) and a Masters in Publishing and Communication.
+    p I've spent the last few years working in the sales and marketing team of a global financial organisation, honing my ability to translate techno-babble and corporate jargon into clear, concise, audience-focused language.
+    p Convoluted, inconsistent content can have disastrous results. It wastes time, as your audience has to slow down, carefully navigating your errors and awkward phrasing to reach your key messages. Most of the time they give up, and never arrive at your point.
+    p I can mend your hot mess - whether you want to post online or print, publish fiction or non-fiction, produce long think pieces, short product descriptions, or perfect your Instagram captions.
+
+    h3 How may I service you?
+    .service
+      h4 Content writing
+      p Struggling to get started? Let me write it for you
+    .service
+      h4 Structural editing
+      p Trying to tell a story? I'll tweak the document structure to make sure your ideas flow
+    .service
+      h4 Copyediting
+      p Require a sense check?  I'll improve the formatting, style, and accuracy of your text
+    .service
+      h4 Proofreading
+      p Need another pair of eyes? I'll check for typos, spelling errors and incorrect punctuation
+
+article#experience
+  .container
+    h2.page-header Experience
+    div.client(ng-repeat="(k, client) in vm.clients")
+      img(ng-src="{{client.image}}" alt="client.title" ng-click="vm.clientClick(k)")
+      div.copy
+        h3 {{client.title}}
+        p {{client.date}}
+        a(href="#" ng-click="vm.clientClick(k)") More information
+
+article#quote
+  .container
+    h2.page-header Quote
+    p Want a rough idea of how much it will cost? List the number of pages or words and the type of work you are looking for to generate an estimate.
+    form.quote__form
+      .input
+        label Type of work:
+        select(ng-model="vm.quote.type" ng-change="vm.total()")
+          option(value="content") Content creation
+          option(value="editing") Editing
+          option(value="proofing") Proofreading
+      p
+        label Type of work
+        select(ng-model="vm.quote.countType" ng-change="vm.total()")
+          option(value="pages") Pages
+          option(value="words") Words
+      p
+        label Number of pages/words
+        input(ng-model="vm.quote.number" min="0" type="number" placeholder="Number of pages or characters" ng-change="vm.total()")
+
+      div(ng-show="vm.quote.number > 0")
+        p That will work out as approximately ${{vm.quote.total.aud}} (Australian) or &pound;{{vm.quote.total.gbp}} or ${{vm.quote.total.usd}} (American).
+        p Remember, this is just an estimate.  For a more accurate quote, contact me below.
+
+article#contact
+  .container
+    h2.page-header Contact
+    h3 Drop me a line at #[a(href="mailto:{{vm.email.to}}") {{vm.email.to}}] or complete the form below.
+    p
+      label Name:
+      input(ng-model="vm.email.name" placeholder="You name")
+    p
+      label Email:
+      input(ng-model="vm.email.email" placeholder="You email" type="email")
+    p
+      label Message:
+      textarea(ng-model="vm.email.message" placeholder="Your message")
+    p
+      button(ng-click="vm.sendEmail()") Send

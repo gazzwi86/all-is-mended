@@ -1,0 +1,87 @@
+{
+  // TODO: very basic initial setup.
+  // most of the deactivated options (0) should become activated and the related code updated
+
+  "env": {
+    "amd": true,
+    "browser": true,
+    "jquery": true,
+    "jasmine": true,
+    "node": true,
+    "es6": true
+  },
+  "parserOptions": {,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true
+    }
+  },
+  "globals": {
+    "module": true,
+    "exports": true,
+    "_": true,
+    "$": true,
+    "analytics": true,
+    "Stripe": true,
+    "angular": true,
+    "inject": true, // used by angular.mock
+    "bowser": true,
+    "Modernizr": true,
+    "ga": true
+  },
+  "plugins": [
+    "angular"
+  ],
+  "rules": {
+    "strict": 0, // best would be: [2, "global"]
+    "comma-dangle": 0,
+    "no-process-exit": 0,
+    "no-use-before-define": [2, "nofunc"],
+    "no-undef": 2,
+    "no-undef-init": 2,
+    "no-undefined": 0,
+    "no-unused-vars": 2,
+    "no-cond-assign": 2,
+    "no-trailing-spaces": 2,
+    "no-debugger": 2,
+    "no-eq-null": 1,
+    "no-eval": 2,
+    "no-unused-expressions": 2,
+    "no-iterator": 2,
+    "no-unreachable": 2,
+    "no-multi-str": 2,
+    "no-loop-func": 1,
+    "no-proto": 2,
+    "no-script-url": 2,
+    "no-shadow": 0,
+    "no-sparse-arrays": 2,
+    "no-underscore-dangle": 0,
+    "no-new-func": 2,
+    "consistent-return": 0,
+    "curly": 1,
+    "eqeqeq": 1,
+    "guard-for-in": 1,
+    "wrap-iife": [2, "any"],
+    "no-caller": 2,
+    "camelcase": 0,
+    "indent": [2, 2, {"SwitchCase": 1}],
+    "new-cap": 1,
+    "space-infix-ops": 0,
+    "key-spacing": 0,
+    "eol-last": 2,
+    "quotes": [2, "single", "avoid-escape"],
+    "semi": [2, "always"],
+    "max-len": [1, 120, 4],
+    "vars-on-top": 0, // should be true later
+    "dot-notation": 0, // could be: [2, {"allowPattern": "^[a-z0-9]+(_[a-z0-9]+)+$"}],
+
+    // angular plugin
+    "angular/ng_di": 0,
+    "angular/ng_document_service": 0,
+    "angular/ng_window_service": 0,
+    "angular/ng_no_digest": 0,
+    "angular/ng_angularelement": 0,
+    "angular/ng_controller_name": 0,
+    "angular/ng_typecheck_boolean": 0
+  }
+}
