@@ -5,12 +5,12 @@ article#home
 
 article#about
   .container
-    h2.page-header About Me
+    h2.page-header About me
     p Hi, I'm Shelley, the editor behind All is mended.
     p If you can’t tell from my Shakespeare-inspired business name, I’m a bit of a word nerd, with a Bachelor of Arts (Literary Studies) and a Masters in Publishing and Communication.
-    p I've spent the last few years working in the sales and marketing team of a global financial organisation, honing my ability to translate techno-babble and corporate jargon into clear, concise, audience-focused language.
-    p Convoluted, inconsistent content can have disastrous results. It wastes time, as your audience has to slow down, carefully navigating your errors and awkward phrasing to reach your key messages. Most of the time they give up, and never arrive at your point.
-    p I can mend your hot mess - whether you want to post online or print, publish fiction or non-fiction, produce long think pieces, short product descriptions, or perfect your Instagram captions.
+    p I've spent the last few years in sales and marketing, honing my ability to translate techno-babble and corporate jargon into clear, concise language. I'm also a member of the Institute of Professional Editors in Australia.
+    p Content that is overly complex, convoluted or inconsistent wastes everyone's time. Your audience has to slow down to carefully navigate errors and awkward phrasing to reach your key messages. They usually give up and never arrive at your point, which means that all your hard work is wasted.
+    p I can mend your hot mess. With ten years' experience as a freelance writer and editor, working for fintech companies, publishing houses, online businesses and not-for-profit organisations,  I can do any odd job you require, whether you want to post online or print it oldschool, publish long think pieces, produce short product descriptions, or perfect your Instagram captions.
 
     h3 How may I service you?
     .service
@@ -33,8 +33,12 @@ article#experience
       img(ng-src="{{client.image}}" alt="client.title" ng-click="vm.clientClick(k)")
       div.copy
         h3 {{client.title}}
-        p {{client.date}}
-        a(href="#" ng-click="vm.clientClick(k)") More information
+        //- p {{client.date}}
+        p
+          a(href="client.url" target="_blank" ng-if="client.url") Visit Site
+        p
+          {{client.description}}
+          //- a(href="#" ng-click="vm.clientClick(k)") More information
 
 article#quote
   .container
@@ -75,3 +79,4 @@ article#contact
       textarea(ng-model="vm.email.message" placeholder="Your message")
     p
       button(ng-click="vm.sendEmail()") Send
+bottom

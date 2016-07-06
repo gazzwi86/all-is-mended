@@ -25,18 +25,25 @@
       };
       this.clients = [
         {
-          title: 'Copyedit of Fishtank Solutions industry report',
-          date: 'July - September 2014',
-          image: '/assets/images/fishtank.png',
-          description: 'Feedback: "Great work Shelley, you really helped us clarify the insights within our data and ' +
-            'communicate this clearly to our audience."'
+          title: 'Content writing for Iron Movement active wear line',
+          date: '2016',
+          image: '/assets/images/iron.jpg',
+          // url: 'http://ironmovement.com.au/',
+          description: '"Wonderful work, highly professional, could not recommend enough. Look forward to lots more work with you in the future."'
         },
         {
           title: 'Copyedit of Australian Multicultural Community Services Summer newsletter',
           date: '2015 - present',
           image: '/assets/images/acms.jpg',
-          description: 'Feedback: "Thank you Shelley! This is great! I really like how you rewrote the story, much ' +
+          description: '"Thank you Shelley! This is great! I really like how you rewrote the story, much ' +
             'more engaging. Thanks for the thoughtful suggestions. I really appreciate your help."'
+        },
+        {
+          title: 'Copyedit of Fishtank Solutions industry report',
+          date: 'July - September 2014',
+          image: '/assets/images/fishtank.png',
+          description: '"Great work Shelley, you really helped us clarify the insights within our data and ' +
+            'communicate this clearly to our audience."'
         },
         {
           title: 'Copyedit of Computershare 2014 and 2015 Annual Reports',
@@ -68,7 +75,7 @@
             'Thames & Hudson',
           date: '2011',
           image: '/assets/images/characters.jpg',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
+          description: ''
         },
         {
           title: 'Proofread and writing for Interiors: Australia and New Zealand, Mitchell Oakley Smith, ' +
@@ -102,13 +109,14 @@
           break;
       }
 
+      // amount in dollars to multiply
       switch (this.quote.countType) {
         case 'pages':
-          countType = 5;
+          countType = 2;
           break;
 
         case 'words':
-          countType = 5 / wpp;
+          countType = 2 / wpp;
           break;
       }
 
