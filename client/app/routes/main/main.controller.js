@@ -25,61 +25,91 @@
       };
       this.clients = [
         {
+          title: 'Content creation for <i>The Grand Tourists</i> travel blog',
+          date: '2016',
+          image: '/assets/images/thegrandtourists.jpg',
+          url: 'http://thegrandtourists.net/',
+          description: 'Ongoing personal project including regular article writing and content creation for' +
+            ' social media channels'
+        },
+        {
+          title: 'Content writing and copyediting for <i>Intelligence report on company meetings' +
+            '</i> for Computershare Limited',
+          date: '2016',
+          image: '/assets/images/intelligence_report.jpg',
+          url: 'http://www.computershare.com/au/Documents/Intelligence%20Report%20-%20Insights%20from' +
+            '%20company%20meetings%20held%20in%202015.pdf',
+          description: 'Included research and project management of publication'
+        },
+        {
+          title: 'Copyediting of various articles in <i>Upper Yarra Mail</i>',
+          date: '2016',
+          image: '/assets/images/insects.jpg',
+          url: 'https://issuu.com/starnewsgroup/docs/2016-07-26_mv_632',
+          description: '<i>"Shelley has assisted with my language, tweaking my academic writing style to better' +
+            ' suit the <i>Upper Yarra Mail</i> audience and make complex scientific information more clear." </i>' +
+            '<br/> <strong>Michael Smith, environmental scientist and columnist</strong>'
+        },
+        {
           title: 'Content writing for Iron Movement active wear line',
           date: '2016',
           image: '/assets/images/iron.jpg',
-          // url: 'http://ironmovement.com.au/',
-          description: '"Wonderful work, highly professional, could not recommend enough. Look forward to lots more work with you in the future."'
+          url: 'http://ironmovement.com.au/',
+          description: '<i>"Wonderful work, highly professional, could not recommend enough. ' +
+            'Look forward to lots more work with you in the future."</i> ' +
+            '<br/><strong>Nicole Stark, Founder of Iron Movement<strong/>'
         },
         {
-          title: 'Copyedit of Australian Multicultural Community Services Summer newsletter',
+          title: 'Copyedit of <i>Australian Multicultural Community Services Summer Newsletter<i>',
           date: '2015 - present',
           image: '/assets/images/acms.jpg',
-          description: '"Thank you Shelley! This is great! I really like how you rewrote the story, much ' +
-            'more engaging. Thanks for the thoughtful suggestions. I really appreciate your help."'
+          description: '<i>"Thank you Shelley! This is great! I really like how you rewrote the story, much ' +
+            'more engaging. Thanks for the thoughtful suggestions. I really appreciate your help."</i> ' +
+            '<br/><strong>Lizbeth Gonzalez, Marketing and Communications Manager<strong/>'
         },
         {
           title: 'Copyedit of Fishtank Solutions industry report',
           date: 'July - September 2014',
           image: '/assets/images/fishtank.png',
-          description: '"Great work Shelley, you really helped us clarify the insights within our data and ' +
-            'communicate this clearly to our audience."'
+          description: '<i>"Great work Shelley, you really helped us clarify the insights within our data and ' +
+            'communicate this clearly to our audience."</i> <br/><strong>Eben Hocking, Marketing Manager</strong>'
         },
         {
           title: 'Copyedit of Computershare 2014 and 2015 Annual Reports',
           date: '1970 - present',
           image: '/assets/images/annual-report-2015.jpg',
-          description: ''
+          description: '<i>"Shelley has an exceptional eye for detail and always provides constructive ' +
+            'suggestions for improvement."</i> <br/><strong>Genevieve Neumann, Corporate Communications Manager</strong>'
         },
         {
-          title: 'Proofread of Beautiful Ugly, Architectural Photography of John Gollings, Thames & Hudson',
+          title: 'Proofread of <i>Beautiful Ugly, Architectural Photography of John Gollings</i> <br/>Thames & Hudson',
           date: '2011',
           image: '/assets/images/beautifulugly.jpg',
           description: ''
         },
         {
-          title: 'Edit of Owl Know How, Cat Rabbit and Isobel Knowles, Thames & Hudson',
+          title: 'Edit of <i>Owl Know How</i> Cat Rabbit and Isobel Knowles, <br/>Thames & Hudson',
           date: '2012',
           image: '/assets/images/owlknowhow.jpg',
           description: ''
         },
         {
-          title: 'Proofread of 46 Square metres of land doesn’t normally become a house, ' +
-            'Stuart Harrison, Thames & Hudson',
+          title: 'Proofread of <i>46 Square metres of land doesn’t normally become a house</i> ' +
+            'Stuart Harrison, <br/>Thames & Hudson',
           date: '2011',
           image: '/assets/images/fortysixsquaremeteres.jpg',
           description: ''
         },
         {
-          title: 'Proofread of Characters: Cultural stories revealed through typography, Stephen Banham, ' +
-            'Thames & Hudson',
+          title: 'Proofread of <i>Characters: Cultural stories revealed through typography</i> Stephen Banham, ' +
+            '<br/>Thames & Hudson',
           date: '2011',
           image: '/assets/images/characters.jpg',
           description: ''
         },
         {
-          title: 'Proofread and writing for Interiors: Australia and New Zealand, Mitchell Oakley Smith, ' +
-            'Thames & Hudon',
+          title: 'Proofread and writing for <i>Interiors: Australia and New Zealand,</i> Mitchell Oakley Smith, ' +
+            '<br/>Thames & Hudon',
           date: '2011',
           image: '/assets/images/interiors.jpg',
           description: ''
@@ -125,75 +155,59 @@
       this.quote.total.usd = ((this.quote.number * (countType * type)) * usd).toFixed(2);
     }
 
-    clientClick(id) {
-      let popupTemplate = '<img src="' +
-        this.clients[id].image + '" alt="' +
-        this.clients[id].title + '" class="dialogImg" />';
-      popupTemplate += '<div>';
-      popupTemplate += '<h3>' + this.clients[id].title + '</h3>';
-      popupTemplate += '<h4>' + this.clients[id].date + '</h4>';
-      popupTemplate += this.clients[id].description;
-      popupTemplate += '</div>';
+    // sendEmail() {
+    //   let success = false;
+    //   let toaster = this.toaster;
+    //   let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/; // eslint-disable-line
 
-      this.ngDialog.open({
-        template: popupTemplate,
-        plain: true
-      });
-    }
-
-    sendEmail() {
-      let success = false;
-      let toaster = this.toaster;
-      let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/; // eslint-disable-line
-
-      if (
-        this.email.name === '' ||
-        this.email.email === '' ||
-        !re.test(this.email.email) ||
-        this.email.message === ''
-      ) {
-        this.toaster.pop({
-          type: 'error',
-          title: 'Error',
-          body: 'Sorry, the is a problem with the content of your message.  Please check and try again.',
-          showCloseButton: true
-        });
-      } else {
-        this.$http({
-          method: 'POST',
-          url: '/email',
-          data: {
-            from: this.email.email,
-            name: this.email.name,
-            message: this.email.message
-          },
-          header: {'Content-Type': 'application/x-www-form-urlencoded'}
-        }).success(() => {
-          success = true;
-          toaster.pop({
-            type: 'success',
-            title: 'Superb!',
-            body: 'Your email has been sent.  I will get back to you as soon as possible',
-            showCloseButton: true
-          });
-        }).error(() => {
-          success = false;
-          toaster.pop({
-            type: 'error',
-            title: 'Sorry!',
-            body: 'The message could not be sent.  We have an issue with the site.',
-            showCloseButton: true
-          });
-        }).then(() => {
-          if (success) {
-            this.email.name = '';
-            this.email.email = '';
-            this.email.message = '';
-            success = false;
-          }
-        });
-      }
-    }
+    //   if (
+    //     this.email.name === '' ||
+    //     this.email.email === '' ||
+    //     !re.test(this.email.email) ||
+    //     this.email.message === ''
+    //   ) {
+    //     this.toaster.pop({
+    //       type: 'error',
+    //       title: 'Error',
+    //       body: 'Sorry, the is a problem with the content of your message.  Please check and try again.',
+    //       showCloseButton: true
+    //     });
+    //   } else {
+    //     this.$http({
+    //       method: 'POST',
+    //       url: '/email',
+    //       data: {
+    //         from: this.email.email,
+    //         name: this.email.name,
+    //         message: this.email.message
+    //       },
+    //       header: {'Content-Type': 'application/x-www-form-urlencoded'}
+    //     }).success(() => {
+    //       success = true;
+    //       toaster.pop({
+    //         type: 'success',
+    //         title: 'Superb!',
+    //         body: 'Your email has been sent.  I will get back to you as soon as possible',
+    //         showCloseButton: true
+    //       });
+    //     }).error(() => {
+    //       success = false;
+    //       toaster.pop({
+    //         type: 'error',
+    //         title: 'Sorry!',
+    //         body: 'The message could not be sent.  We have an issue with the site.',
+    //         showCloseButton: true
+    //       });
+    //     }).then(() => {
+    //       if (success) {
+    //         this.email.name = '';
+    //         this.email.email = '';
+    //         this.email.message = '';
+    //         success = false;
+    //       }
+    //     });
+    //   }
+    // }
   }
 
   angular.module('allIsMendedApp')
