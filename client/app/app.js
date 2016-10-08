@@ -47,6 +47,13 @@ angular.module('allIsMendedApp', [
     $rootScope.progressbar.complete();
   }
 
+  console.log(document.getElementById('bg'));
+  // jQuery('#bg').css('height', $window.height());
+  // $window.onScroll = function() {
+  //   console.log('here');
+  //   jQuery('#bg').css('height', $window.height());
+  // };
+
   // on page change start
   $rootScope.$on('$stateChangeStart', function() {
     showLoader();
