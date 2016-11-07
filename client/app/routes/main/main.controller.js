@@ -17,12 +17,6 @@
           usd: 0
         }
       };
-      this.email = {
-        to: 'shelley.allismended@gmail.com',
-        name: '',
-        email: '',
-        message: ''
-      };
       this.clients = [
         {
           title: 'Content creation for <i>The Grand Tourists</i> travel blog',
@@ -154,60 +148,6 @@
       this.quote.total.gbp = ((this.quote.number * (countType * type)) * gbp).toFixed(2);
       this.quote.total.usd = ((this.quote.number * (countType * type)) * usd).toFixed(2);
     }
-
-    // sendEmail() {
-    //   let success = false;
-    //   let toaster = this.toaster;
-    //   let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/; // eslint-disable-line
-
-    //   if (
-    //     this.email.name === '' ||
-    //     this.email.email === '' ||
-    //     !re.test(this.email.email) ||
-    //     this.email.message === ''
-    //   ) {
-    //     this.toaster.pop({
-    //       type: 'error',
-    //       title: 'Error',
-    //       body: 'Sorry, the is a problem with the content of your message.  Please check and try again.',
-    //       showCloseButton: true
-    //     });
-    //   } else {
-    //     this.$http({
-    //       method: 'POST',
-    //       url: '/email',
-    //       data: {
-    //         from: this.email.email,
-    //         name: this.email.name,
-    //         message: this.email.message
-    //       },
-    //       header: {'Content-Type': 'application/x-www-form-urlencoded'}
-    //     }).success(() => {
-    //       success = true;
-    //       toaster.pop({
-    //         type: 'success',
-    //         title: 'Superb!',
-    //         body: 'Your email has been sent.  I will get back to you as soon as possible',
-    //         showCloseButton: true
-    //       });
-    //     }).error(() => {
-    //       success = false;
-    //       toaster.pop({
-    //         type: 'error',
-    //         title: 'Sorry!',
-    //         body: 'The message could not be sent.  We have an issue with the site.',
-    //         showCloseButton: true
-    //       });
-    //     }).then(() => {
-    //       if (success) {
-    //         this.email.name = '';
-    //         this.email.email = '';
-    //         this.email.message = '';
-    //         success = false;
-    //       }
-    //     });
-    //   }
-    // }
   }
 
   angular.module('allIsMendedApp')

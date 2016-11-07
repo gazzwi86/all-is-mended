@@ -70,17 +70,14 @@ article#quote
 article#contact
   .container
     h2.page-header Contact
-    h3 Drop me a line at #[a(href="mailto:{{vm.email.to}}") {{vm.email.to}}]
-     //- or complete the form below.
-    //- p
-    //-   label Name:
-    //-   input(ng-model="vm.email.name" placeholder="You name")
-    //- p
-    //-   label Email:
-    //-   input(ng-model="vm.email.email" placeholder="You email" type="email")
-    //- p
-    //-   label Message:
-    //-   textarea(ng-model="vm.email.message" placeholder="Your message")
-    //- p
-    //-   button(ng-click="vm.sendEmail()") Send
+    h3 Drop me a line at #[a(href="mailto:shelley.allismended@gmail.com") shelley.allismended@gmail.com] or complete the form below.
+    form.col-xs-12.col-sm-6.col-md-4.col-lg-3.row(method="POST" action="http://formspree.io/shelley.allismended@gmail.com")
+      fieldset
+        .form-group
+          input.form-control(type="email" name="email" placeholder="Your email")
+        .form-group
+          textarea.form-control(name="message" placeholder="Your message")
+        .form-group
+          button.btn.btn-primary(type="submit") Send
+
 bottom
