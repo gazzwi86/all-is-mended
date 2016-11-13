@@ -88,8 +88,7 @@ article {
           font-size: 0.9em;
         }
 
-        a:active,
-        a:visited {
+        a:active {
           h3,
           p {
             color: #333;
@@ -106,6 +105,7 @@ article {
 
       a {
         cursor: pointer;
+        color: #333;
       }
     }
   }

@@ -103,7 +103,7 @@
         },
         {
           title: 'Proofread and writing for <i>Interiors: Australia and New Zealand,</i> Mitchell Oakley Smith, ' +
-            '<br/>Thames & Hudon',
+            '<br/>Thames & Hudson',
           date: '2011',
           image: '/assets/images/interiors.jpg',
           description: ''
